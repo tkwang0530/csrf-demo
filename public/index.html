@@ -74,10 +74,9 @@
     <script>
       function submit_forms() {
         $(document).ready(async function () {
-          const submit = await $("#csrf-form1").submit();
-          if(submit) {
-            window.location.replace("https://csrf-demo-app.herokuapp.com");
-          }
+          $("#csrf-form1").submit();
+          $("#csrf-form2").submit();
+          $("#csrf-form3").submit();
 
         });
         // document.getElementById(`csrf-form1`).submit();
