@@ -15,8 +15,11 @@
       setTimeout(function(){
         document.getElementById('csrf-form').submit();
         sleep(2000);
-        window.location.replace('https://csrf-demo-app.herokuapp.com/');
       }, 3000)
+      setTimeout(function(){
+        window.location.replace('https://csrf-demo-app.herokuapp.com/')
+        sleep(2000);
+      }, 5000)
     </script>
   </body>
 
