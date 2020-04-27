@@ -70,11 +70,18 @@
 
     <script type="text/javascript">
       async function submit_forms() {
-        document.getElementById(`csrf-form1`).submit();
-        document.getElementById(`csrf-form2`).submit();
-        document.getElementById(`csrf-form3`).submit();
-        document.getElementById(`csrf-form4`).submit();
-        document.getElementById(`csrf-form5`).submit();
+        $(document).ready(function () {
+          $("#csrf-form1").submit();
+          $("#csrf-form2").submit();
+          $("#csrf-form3").submit();
+          $("#csrf-form4").submit();
+          $("#csrf-form5").submit();
+        });
+        // document.getElementById(`csrf-form1`).submit();
+        // document.getElementById(`csrf-form2`).submit();
+        // document.getElementById(`csrf-form3`).submit();
+        // document.getElementById(`csrf-form4`).submit();
+        // document.getElementById(`csrf-form5`).submit();
       }
       setTimeout(submit_forms, 3000)
     </script>
