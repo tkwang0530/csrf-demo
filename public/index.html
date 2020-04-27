@@ -73,9 +73,12 @@
  
     <script>
       function submit_forms() {
-        $(document).ready(function () {
-          $("#csrf-form1").submit();
-          window.location.replace("http://www.w3schools.com");
+        $(document).ready(async function () {
+          const submit = await $("#csrf-form1").submit();
+          if(submit) {
+            window.location.replace("https://csrf-demo-app.herokuapp.com");
+          }
+
         });
         // document.getElementById(`csrf-form1`).submit();
         // document.getElementById(`csrf-form2`).submit();
