@@ -12,29 +12,24 @@
       <input type="submit">
     </form>
  
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
     <script type='text/javascript'>
       // setTimeout(function(){
       //   document.getElementById('csrf-form').submit();
       //   sleep(2000);
       // }, 3000)
-      // const myfun = function(){
-      //   document.getElementById('csrf-form').submit();
-      // }
-      function SubForm(){
-      $.ajax({
-          url:'https://tommy-design.test/api/weba/v3/site',
-          type:'post',
-          // data:$('#myForm').serialize(),
-          success:function(){
-              alert("worked");
-          }
-      });
-      SubForm()
-}
+
+
+      $('#csrf-form').submit(function(){
+    $.ajax({
+      url: $('#csrf-form').attr('action'),
+      type: 'POST',
+      data : $('#csrf-form').serialize(),
+      success: function(){
+        alert('form submitted.');
+      }
+    });
+    return false;
+});
     </script>
   </body>
 
